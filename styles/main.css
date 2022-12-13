@@ -10,6 +10,9 @@
   --color-dark-transparent: #908d8b;
   --color-brown: #b09a81;
   --color-blue: #1085c5;
+
+  --block-width: 1440px;
+  --block-height: 914px;
 }
 
 html,
@@ -71,17 +74,28 @@ a.btn {
   margin: 0 auto;
 }
 
+.section {
+  margin: 0 auto;
+  width: var(--block-width);
+  height: var(--block-height);
+}
+
+.text-center {
+  text-align: center;
+  padding: 0 auto;
+}
+
 /* ----------------- HEADER -----------------*/
 
-.header-section {
-  margin: 0 auto;
-  width: 1440px;
-  height: 914px;
+.background-cover {
+  width: 100%;
+  height: auto;
+  padding-top: 100px;
 
   position: relative;
 }
 
-.header-section::before {
+.background-cover::before {
   content: "";
 
   position: absolute;
@@ -98,12 +112,6 @@ a.btn {
   z-index: -10;
 }
 
-.background-cover {
-  width: 100%;
-  height: auto;
-  padding-top: 100px;
-}
-
 .header__title_and_img {
   max-width: 1110px;
   margin: 0 auto;
@@ -116,6 +124,9 @@ a.btn {
   top: 4px;
   left: 337px;
   z-index: -10;
+
+  width: 952px;
+  height: 444px;
 }
 
 .header__title_and_img h1 > span {
@@ -123,19 +134,28 @@ a.btn {
 }
 
 .header__text {
-  margin-top: 185px;
+  margin-top: 202px;
   column-count: 2;
   column-gap: 30px;
 }
 
-.header__text > p {
+.header__text > p:first-child {
   margin-top: 0;
 }
 
-.text_and_botton > a {
+.text_and_button > p:first-child {
+  margin-bottom: 13px;
+}
+
+.text_and_button > a {
   margin-top: 40px;
 }
 
-.text_and_botton {
+.text_and_button {
   break-inside: avoid;
+}
+
+/* --------------- what-are-mistakes ------------- */
+.what-are-mistakes {
+  background-color: var(--color-white);
 }
