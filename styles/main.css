@@ -32,9 +32,13 @@ a {
 }
 
 body {
-  font: normal 16px/1.6em "Open Sans", sans-serif;
+  font: normal 16px/1.6 "Open Sans", sans-serif;
   color: var(--color-dark);
   background-color: var(--color-light);
+}
+
+main {
+  position: relative;
 }
 
 h1,
@@ -157,5 +161,37 @@ a.btn {
 
 /* --------------- what-are-mistakes ------------- */
 .what-are-mistakes {
+  box-sizing: border-box;
+  display: block;
   background-color: var(--color-white);
+  text-align: center;
+  padding-top: 100px;
+  z-index: -20;
+  height: calc(var(--block-height) - 96px);
+}
+
+.what-are-mistakes h2 > span {
+  color: var(--color-main);
+}
+
+.what-are-mistakes p {
+  margin-top: 27px;
+  line-height: 36px;
+}
+
+.what-are-mistakes iframe {
+  margin-top: 26px;
+  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
+  z-index: 10;
+}
+
+/* ------------ 5 искажений ----------- */
+.five-mistakes {
+  background-color: var(--color-main-dark);
+  height: 991px;
+  width: 100%;
+  position: absolute;
+  top: calc(var(--block-height) - 96px);
+  left: 0;
+  z-index: -10;
 }
