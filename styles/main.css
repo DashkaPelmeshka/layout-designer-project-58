@@ -25,10 +25,18 @@ h1,
 h2,
 h3,
 p,
-a {
+a,
+ul,
+li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 body {
@@ -73,7 +81,7 @@ a.btn {
   color: var(--color-white);
 }
 
-.container {
+.content {
   width: 1110px;
   margin: 0 auto;
 }
@@ -194,4 +202,56 @@ a.btn {
   top: calc(var(--block-height) - 96px);
   left: 0;
   z-index: -10;
+  padding-top: 200px;
+}
+
+.five-mistakes ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-item {
+  width: 350px;
+  min-height: 323px;
+  max-height: 348px;
+  margin-bottom: 20px;
+  background-color: var(--color-light);
+  padding: 24px;
+}
+
+.flex-item:first-child {
+  background-color: transparent;
+  padding: 0;
+  padding-top: 0px;
+}
+
+.five-mistakes li:first-child > h2 {
+  font: normal 52px/1.2 "Neucha", sans-serif;
+  color: var(--color-white);
+}
+
+.five-mistakes li:first-child > h2 > span {
+  color: var(--color-main);
+}
+
+.five-mistakes li > h2 {
+  color: var(--color-main-dark);
+}
+
+.five-mistakes li > h3 {
+  font-size: 34px;
+  line-height: 1.2;
+  color: var(--color-main);
+  margin-top: 40px;
+}
+
+.five-mistakes li > p {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+li.flex-item > h2 {
+  font-size: 64px;
+  line-height: 71px;
 }
